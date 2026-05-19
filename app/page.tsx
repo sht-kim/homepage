@@ -1,6 +1,7 @@
 import { Hero } from "@/components/Hero";
 import { ImpactBand } from "@/components/ImpactBand";
 import { Products } from "@/components/Products";
+import { WhyPanel } from "@/components/WhyPanel";
 import { Contact } from "@/components/Contact";
 
 export default function HomePage() {
@@ -9,16 +10,8 @@ export default function HomePage() {
       <Hero />
       <ImpactBand />
       <Products />
+      <WhyPanel />
       <Contact />
-      {/* Upcoming sections (Phase 3+):
-          - What is WDAQ-X
-          - Products (EG-Icon / Eddy Sensors / Eddy iMSS)
-          - How it Works
-          - References (Samsung Display + more)
-          - Why WDAQ-X (가성비 3가지 근거)
-          - Company & Vision
-          - Contact
-      */}
     </>
   );
 }
