@@ -143,10 +143,10 @@ export function FlowDiagram() {
             <g key={`label-${node.key}`}>
               <text
                 x={cx}
-                y={centerY + NODE_SIZE / 2 + 40}
+                y={centerY + NODE_SIZE / 2 + 32}
                 textAnchor="middle"
-                fontSize="28"
-                fontWeight="800"
+                fontSize="18"
+                fontWeight="700"
                 fill="#0f172a"
                 style={{ letterSpacing: "-0.02em" }}
               >
@@ -154,11 +154,11 @@ export function FlowDiagram() {
               </text>
               <text
                 x={cx}
-                y={centerY + NODE_SIZE / 2 + 68}
+                y={centerY + NODE_SIZE / 2 + 54}
                 textAnchor="middle"
-                fontSize="20"
+                fontSize="13"
                 fontFamily="var(--font-mono)"
-                fontWeight="600"
+                fontWeight="500"
                 fill="#0e7490"
               >
                 {node.sub}

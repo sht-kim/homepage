@@ -48,34 +48,27 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative bg-background py-16 sm:py-24 md:py-32"
+      className="relative bg-background py-16 sm:py-20 md:py-24"
     >
       {/* Subtle top accent */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-slate-200"
       />
-      {/* Soft backdrop glow */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10"
-      >
-        <div className="absolute -top-32 left-1/2 -translate-x-1/2 h-[420px] w-[1000px] rounded-full bg-[radial-gradient(closest-side,rgba(6,182,212,0.10),transparent_70%)] blur-2xl" />
-      </div>
 
       <Container>
         {/* Header */}
         <div className="max-w-3xl">
-          <span className="inline-flex items-center gap-2 rounded-full bg-accent-soft px-3.5 py-1.5 text-sm font-bold uppercase tracking-[0.08em] text-accent-deep font-mono">
+          <span className="inline-flex items-center gap-2 rounded-full bg-accent-soft px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-accent-deep font-mono">
             <span className="size-1.5 rounded-full bg-accent pulse-soft" />
             GET IN TOUCH
           </span>
-          <h2 className="mt-5 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-[-0.02em] text-foreground">
+          <h2 className="mt-4 text-3xl sm:text-4xl md:text-[40px] font-bold leading-[1.2] tracking-[-0.02em] text-foreground">
             도입을 검토 중이시라면
             <br />
             <span className="text-primary">WDAQ-X 팀이 직접 상담</span>해드립니다.
           </h2>
-          <p className="mt-4 sm:mt-6 text-lg sm:text-xl md:text-2xl text-slate-600 leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
             현장 환경과 도입 목적에 맞춰 맞춤 제안서를 작성해드립니다.
             <br className="hidden md:block" />
             <span className="text-slate-500">평균 영업일 1일 이내 회신.</span>
@@ -83,22 +76,22 @@ export function Contact() {
         </div>
 
         {/* Body grid */}
-        <div className="mt-12 sm:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
+        <div className="mt-10 sm:mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left: Use cases */}
           <div className="lg:col-span-7">
-            <h3 className="text-base sm:text-lg font-mono uppercase tracking-[0.08em] text-accent-deep font-bold mb-6">
+            <h3 className="text-xs font-mono uppercase tracking-[0.1em] text-accent-deep font-semibold mb-5">
               이런 경우 문의주세요
             </h3>
-            <ul className="space-y-4">
+            <ul className="space-y-3">
               {useCases.map((u) => (
                 <li
                   key={u.title}
-                  className="flex items-start gap-4 rounded-xl border border-slate-200 bg-white p-5 sm:p-6 transition-colors hover:border-accent"
+                  className="flex items-start gap-3 rounded-lg border border-slate-200 bg-white p-4 sm:p-5 transition-colors hover:border-accent"
                 >
-                  <span className="mt-0.5 flex-none inline-flex items-center justify-center size-8 rounded-md bg-accent-soft text-accent-deep">
+                  <span className="mt-0.5 flex-none inline-flex items-center justify-center size-7 rounded-md bg-accent-soft text-accent-deep">
                     <svg
-                      width="18"
-                      height="18"
+                      width="16"
+                      height="16"
                       viewBox="0 0 16 16"
                       fill="none"
                       aria-hidden
@@ -113,10 +106,10 @@ export function Contact() {
                     </svg>
                   </span>
                   <div>
-                    <p className="text-lg sm:text-xl font-bold text-foreground leading-snug tracking-[-0.01em]">
+                    <p className="text-base sm:text-lg font-bold text-foreground leading-snug tracking-[-0.01em]">
                       {u.title}
                     </p>
-                    <p className="mt-1.5 text-base text-slate-600 leading-relaxed">
+                    <p className="mt-1 text-sm text-slate-600 leading-relaxed">
                       {u.desc}
                     </p>
                   </div>
@@ -127,37 +120,28 @@ export function Contact() {
 
           {/* Right: CS Center card */}
           <div className="lg:col-span-5">
-            <div className="sticky top-28">
-              <div className="relative rounded-2xl overflow-hidden border-2 border-primary bg-[#0b1226] text-white shadow-[0_24px_48px_-24px_rgba(11,18,38,0.5)]">
+            <div className="sticky top-24">
+              <div className="relative rounded-xl overflow-hidden border border-primary bg-[#0b1226] text-white shadow-[0_8px_24px_-12px_rgba(11,18,38,0.4)]">
                 {/* Accent top bar */}
-                <div className="h-1 bg-accent" />
-                {/* Decoration */}
-                <div
-                  aria-hidden
-                  className="pointer-events-none absolute inset-0"
-                  style={{
-                    background:
-                      "radial-gradient(60% 80% at 100% 0%, rgba(6,182,212,0.18), transparent 70%)",
-                  }}
-                />
+                <div className="h-0.5 bg-accent" />
 
-                <div className="relative p-6 sm:p-8">
-                  <div className="flex items-center gap-2 mb-6">
-                    <span className="size-2 rounded-full bg-accent pulse-soft" />
-                    <span className="text-sm font-mono uppercase tracking-[0.1em] text-accent font-bold">
+                <div className="relative p-5 sm:p-6">
+                  <div className="flex items-center gap-2 mb-5">
+                    <span className="size-1.5 rounded-full bg-accent pulse-soft" />
+                    <span className="text-xs font-mono uppercase tracking-[0.1em] text-accent font-semibold">
                       CS CENTER
                     </span>
                   </div>
 
-                  <dl className="space-y-5">
+                  <dl className="space-y-4">
                     <div>
-                      <dt className="text-sm font-mono uppercase tracking-wider text-slate-400 font-semibold mb-1.5">
+                      <dt className="text-xs font-mono uppercase tracking-[0.08em] text-slate-400 font-semibold mb-1">
                         EMAIL
                       </dt>
                       <dd>
                         <a
                           href={`mailto:${CONTACT.email}`}
-                          className="text-lg sm:text-xl font-bold text-white hover:text-accent transition-colors break-all"
+                          className="text-base sm:text-lg font-bold text-white hover:text-accent transition-colors break-all"
                         >
                           {CONTACT.email}
                         </a>
@@ -165,10 +149,10 @@ export function Contact() {
                     </div>
 
                     <div>
-                      <dt className="text-sm font-mono uppercase tracking-wider text-slate-400 font-semibold mb-1.5">
+                      <dt className="text-xs font-mono uppercase tracking-[0.08em] text-slate-400 font-semibold mb-1">
                         ADDRESS
                       </dt>
-                      <dd className="text-base sm:text-lg text-slate-200 leading-relaxed">
+                      <dd className="text-sm text-slate-200 leading-relaxed">
                         {CONTACT.addressShort}
                         <br />
                         <span className="text-slate-300">{CONTACT.addressDetail}</span>
@@ -176,10 +160,10 @@ export function Contact() {
                     </div>
 
                     <div>
-                      <dt className="text-sm font-mono uppercase tracking-wider text-slate-400 font-semibold mb-1.5">
+                      <dt className="text-xs font-mono uppercase tracking-[0.08em] text-slate-400 font-semibold mb-1">
                         HOURS
                       </dt>
-                      <dd className="text-base sm:text-lg text-slate-200">
+                      <dd className="text-sm text-slate-200">
                         {CONTACT.hours}
                       </dd>
                     </div>
@@ -188,12 +172,12 @@ export function Contact() {
                   {/* Primary CTA */}
                   <a
                     href={mailto}
-                    className="mt-8 flex items-center justify-center gap-2 w-full h-14 rounded-lg bg-accent text-white text-base font-bold transition-all duration-200 hover:bg-accent-deep active:scale-[0.99]"
+                    className="mt-6 flex items-center justify-center gap-2 w-full h-11 rounded-md bg-accent text-white text-sm font-semibold transition-all duration-200 hover:bg-accent-deep active:scale-[0.99]"
                   >
                     이메일로 문의하기
                     <svg
-                      width="18"
-                      height="18"
+                      width="14"
+                      height="14"
                       viewBox="0 0 16 16"
                       fill="none"
                       aria-hidden
@@ -208,33 +192,33 @@ export function Contact() {
                     </svg>
                   </a>
 
-                  <p className="mt-3 text-sm text-slate-400 text-center font-mono">
+                  <p className="mt-2.5 text-xs text-slate-400 text-center font-mono">
                     클릭 시 메일 앱이 열립니다.
                   </p>
                 </div>
               </div>
 
               {/* Small map / location hint card */}
-              <div className="mt-4 rounded-xl border border-slate-200 bg-white p-5">
-                <p className="text-sm font-mono uppercase tracking-wider text-accent-deep font-bold mb-2">
+              <div className="mt-3 rounded-lg border border-slate-200 bg-white p-4">
+                <p className="text-xs font-mono uppercase tracking-[0.08em] text-accent-deep font-semibold mb-1.5">
                   LOCATION
                 </p>
-                <p className="text-base font-bold text-foreground">
+                <p className="text-sm font-bold text-foreground">
                   충남테크노파크 번영관
                 </p>
-                <p className="text-base text-slate-600 leading-relaxed mt-1">
+                <p className="text-sm text-slate-600 leading-relaxed mt-0.5">
                   충남 천안시 서북구 직산읍 직산로 136
                 </p>
                 <a
                   href="https://map.naver.com/p/search/충남테크노파크%20번영관"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-deep hover:text-accent transition-colors"
+                  className="mt-2.5 inline-flex items-center gap-1 text-xs font-semibold text-accent-deep hover:text-accent transition-colors"
                 >
                   네이버 지도에서 보기
                   <svg
-                    width="14"
-                    height="14"
+                    width="12"
+                    height="12"
                     viewBox="0 0 16 16"
                     fill="none"
                     aria-hidden

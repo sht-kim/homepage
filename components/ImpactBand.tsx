@@ -25,19 +25,19 @@ export function ImpactBand() {
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/60 to-transparent"
       />
 
-      <Container className="relative py-12 sm:py-16 md:py-20">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-8 sm:gap-y-10 gap-x-5 sm:gap-x-8 lg:gap-x-10">
+      <Container className="relative py-10 sm:py-14 md:py-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-7 sm:gap-y-8 gap-x-5 sm:gap-x-8 lg:gap-x-10">
           {stats.map((s) => (
             <div key={s.label} className="text-left">
-              <div className="flex items-baseline gap-1.5 sm:gap-2 flex-wrap">
-                <span className="font-mono text-4xl sm:text-5xl md:text-6xl font-semibold text-white tracking-tight">
+              <div className="flex items-baseline gap-1.5 flex-wrap">
+                <span className="font-mono text-3xl sm:text-4xl md:text-5xl font-semibold text-white tracking-tight">
                   {s.value}
                 </span>
-                <span className="text-xs sm:text-sm font-mono uppercase tracking-wider text-accent">
+                <span className="text-[11px] sm:text-xs font-mono uppercase tracking-[0.1em] text-accent">
                   {s.unit}
                 </span>
               </div>
-              <p className="mt-2 sm:mt-3 text-sm sm:text-base text-slate-300 leading-relaxed">
+              <p className="mt-2 text-sm text-slate-300 leading-relaxed">
                 {s.label}
               </p>
             </div>

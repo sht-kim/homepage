@@ -29,8 +29,8 @@ const variants: Record<Variant, string> = {
 };
 
 const sizes: Record<Size, string> = {
-  md: "h-12 px-6 text-sm",
-  lg: "h-14 px-8 text-base",
+  md: "h-10 px-5 text-sm",
+  lg: "h-11 px-6 text-sm",
 };
 
 export function ButtonLink({

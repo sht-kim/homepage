@@ -5,35 +5,26 @@ export function WhyPanel() {
   return (
     <section
       id="why"
-      className="relative overflow-hidden bg-background py-20 md:py-28 lg:py-32"
+      className="relative overflow-hidden bg-background py-16 sm:py-20 md:py-24"
     >
       {/* Top divider */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"
-      />
-      {/* Soft ambient glow */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10"
-        style={{
-          background:
-            "radial-gradient(60% 50% at 80% 20%, rgba(6,182,212,0.08), transparent 70%), radial-gradient(50% 60% at 10% 80%, rgba(30,42,82,0.06), transparent 70%)",
-        }}
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-slate-200"
       />
 
       <Container>
         {/* Heading */}
         <div className="max-w-3xl">
           <Badge>WHY EG-ICON</Badge>
-          <h2 className="mt-5 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-[-0.02em] text-foreground">
+          <h2 className="mt-4 text-3xl sm:text-4xl md:text-[40px] font-bold leading-[1.2] tracking-[-0.02em] text-foreground">
             단순한 수집을 넘어,
             <br />
             <span className="text-primary">
               센서가 <em className="not-italic text-accent-deep">왜 그런지</em>까지 압니다.
             </span>
           </h2>
-          <p className="mt-4 sm:mt-6 text-lg sm:text-xl md:text-2xl text-slate-600 leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
             대부분의 산업용 IoT는 “어디가 이상한가”까지만 알려줍니다.
             EG-Icon은 한 단계 더 나아가, 그 이상이
             <span className="text-foreground font-semibold"> 왜 일어났는지</span>를
@@ -42,30 +33,30 @@ export function WhyPanel() {
         </div>
 
         {/* Before / After comparison */}
-        <div className="mt-14 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
+        <div className="mt-12 md:mt-14 grid grid-cols-1 md:grid-cols-2 gap-5">
           {/* Before */}
-          <article className="relative rounded-2xl border border-slate-200 bg-white p-7 md:p-8">
+          <article className="relative rounded-xl border border-slate-200 bg-white p-6">
             <div className="flex items-center gap-2">
-              <span className="font-mono text-sm uppercase tracking-[0.12em] text-slate-400">
+              <span className="font-mono text-xs uppercase tracking-[0.1em] text-slate-400 font-semibold">
                 Before
               </span>
               <span className="h-px flex-1 bg-slate-200" />
             </div>
-            <h3 className="mt-4 text-2xl md:text-3xl font-bold text-slate-700 leading-snug">
+            <h3 className="mt-3 text-xl md:text-2xl font-bold text-slate-700 leading-snug">
               데이터를 <span className="text-slate-500">모으기만</span> 하는 박스
             </h3>
-            <p className="mt-3 text-base md:text-lg text-slate-500 leading-relaxed">
+            <p className="mt-2.5 text-sm md:text-base text-slate-500 leading-relaxed">
               알람은 울리지만, 왜 그런지는 엔지니어가 직접 추적해야 합니다.
               수치는 많은데 의사결정은 여전히 사람의 경험에 의존합니다.
             </p>
-            <ul className="mt-6 space-y-2.5 text-base text-slate-500">
+            <ul className="mt-5 space-y-2 text-sm text-slate-500">
               {[
                 "센서값만 표시",
                 "이상 위치만 통보",
                 "원인 추적은 사람의 몫",
               ].map((t) => (
                 <li key={t} className="flex items-start gap-2.5">
-                  <span className="mt-2 size-1.5 shrink-0 rounded-full bg-slate-300" />
+                  <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-slate-300" />
                   <span>{t}</span>
                 </li>
               ))}
@@ -73,23 +64,23 @@ export function WhyPanel() {
           </article>
 
           {/* After */}
-          <article className="relative rounded-2xl border-2 border-accent/40 bg-gradient-to-br from-white via-white to-accent-soft/50 p-7 md:p-8 shadow-[0_24px_48px_-24px_rgba(6,182,212,0.25)]">
-            <div className="absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-gradient-to-r from-accent/40 via-accent to-accent/40" />
+          <article className="relative rounded-xl border border-accent/50 bg-gradient-to-br from-white to-accent-soft/40 p-6 shadow-[0_8px_24px_-12px_rgba(6,182,212,0.18)]">
+            <div className="absolute inset-x-0 top-0 h-0.5 rounded-t-xl bg-accent" />
             <div className="flex items-center gap-2">
-              <span className="font-mono text-sm uppercase tracking-[0.12em] text-accent-deep">
+              <span className="font-mono text-xs uppercase tracking-[0.1em] text-accent-deep font-semibold">
                 With EG-Icon
               </span>
               <span className="h-px flex-1 bg-accent/30" />
             </div>
-            <h3 className="mt-4 text-2xl md:text-3xl font-bold text-foreground leading-snug">
+            <h3 className="mt-3 text-xl md:text-2xl font-bold text-foreground leading-snug">
               데이터의 <span className="text-accent-deep">의미</span>를 아는 박스
             </h3>
-            <p className="mt-3 text-base md:text-lg text-slate-600 leading-relaxed">
+            <p className="mt-2.5 text-sm md:text-base text-slate-600 leading-relaxed">
               설비·공정·품질이 어떻게 연결되는지 박스 안에 들어있어,
               이상이 생기면 <span className="font-semibold text-foreground">원인 경로</span>까지
               함께 보여줍니다.
             </p>
-            <ul className="mt-6 space-y-2.5 text-base text-slate-700">
+            <ul className="mt-5 space-y-2 text-sm text-slate-700">
               {[
                 "이상의 위치 + 원인 경로",
                 "작업자가 1초에 이해하는 설명",
@@ -97,11 +88,11 @@ export function WhyPanel() {
               ].map((t) => (
                 <li key={t} className="flex items-start gap-2.5">
                   <svg
-                    width="18"
-                    height="18"
+                    width="16"
+                    height="16"
                     viewBox="0 0 16 16"
                     fill="none"
-                    className="mt-1 shrink-0"
+                    className="mt-0.5 shrink-0"
                   >
                     <path
                       d="M13.5 4.5L6 12L2.5 8.5"
@@ -119,21 +110,21 @@ export function WhyPanel() {
         </div>
 
         {/* Why Panel demo card */}
-        <div className="mt-12 md:mt-14 rounded-2xl border border-slate-200 bg-white overflow-hidden">
+        <div className="mt-10 md:mt-12 rounded-xl border border-slate-200 bg-white overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_1fr]">
             {/* Left — alarm + reasoning */}
-            <div className="p-7 md:p-9 lg:p-10 border-b lg:border-b-0 lg:border-r border-slate-200">
+            <div className="p-6 md:p-8 border-b lg:border-b-0 lg:border-r border-slate-200">
               <div className="flex items-center gap-2">
-                <span className="size-2 rounded-full bg-rose-500 pulse-soft" />
-                <span className="font-mono text-sm uppercase tracking-[0.1em] text-slate-500">
+                <span className="size-1.5 rounded-full bg-rose-500 pulse-soft" />
+                <span className="font-mono text-xs uppercase tracking-[0.1em] text-slate-500 font-semibold">
                   Why Panel · Live Reasoning
                 </span>
               </div>
-              <p className="mt-5 text-xl md:text-2xl font-bold text-foreground leading-snug">
+              <p className="mt-4 text-lg md:text-xl font-bold text-foreground leading-snug">
                 알람: <span className="text-rose-600">권선기 #3 인덕턴스 편차 ↑</span>
               </p>
 
-              <div className="mt-6 space-y-3">
+              <div className="mt-5 space-y-2.5">
                 {[
                   { tag: "원인 ①", text: "함침 공정 온도가 평소보다 4.2°C 높음" },
                   { tag: "원인 ②", text: "→ 건조 수율이 12% 저하" },
@@ -141,11 +132,11 @@ export function WhyPanel() {
                 ].map((row, i) => (
                   <div
                     key={row.tag}
-                    className="flex items-start gap-3 rounded-lg bg-slate-50 px-4 py-3"
+                    className="flex items-start gap-2.5 rounded-md bg-slate-50 px-3 py-2.5"
                   >
                     <span
                       className={
-                        "shrink-0 rounded-md px-2 py-0.5 font-mono text-xs font-semibold uppercase tracking-wider " +
+                        "shrink-0 rounded px-1.5 py-0.5 font-mono text-[11px] font-semibold uppercase tracking-wider " +
                         (i === 2
                           ? "bg-accent text-white"
                           : "bg-white text-slate-600 border border-slate-200")
@@ -153,22 +144,22 @@ export function WhyPanel() {
                     >
                       {row.tag}
                     </span>
-                    <span className="text-base md:text-lg text-slate-700 leading-relaxed">
+                    <span className="text-sm text-slate-700 leading-relaxed">
                       {row.text}
                     </span>
                   </div>
                 ))}
               </div>
 
-              <p className="mt-6 text-sm md:text-base text-slate-500 leading-relaxed">
+              <p className="mt-5 text-sm text-slate-500 leading-relaxed">
                 기존에는 엔지니어가 로그를 뒤져야 알 수 있었던 인과 경로를,
                 EG-Icon이 알람과 함께 즉시 제시합니다.
               </p>
             </div>
 
             {/* Right — mini knowledge graph */}
-            <div className="relative bg-gradient-to-br from-slate-50 via-white to-accent-soft/40 p-6 md:p-8 flex flex-col">
-              <span className="font-mono text-sm uppercase tracking-[0.1em] text-accent-deep">
+            <div className="relative bg-gradient-to-br from-slate-50 to-accent-soft/30 p-5 md:p-6 flex flex-col">
+              <span className="font-mono text-xs uppercase tracking-[0.1em] text-accent-deep font-semibold">
                 Knowledge Path
               </span>
 
@@ -285,7 +276,7 @@ export function WhyPanel() {
                 </svg>
               </div>
 
-              <p className="text-xs md:text-sm text-slate-500 leading-relaxed">
+              <p className="text-xs text-slate-500 leading-relaxed">
                 설비·공정·품질이 박스 안에서 연결되어, 이상의 원인을 추론합니다.
               </p>
             </div>
@@ -293,12 +284,12 @@ export function WhyPanel() {
         </div>
 
         {/* Trust footer line */}
-        <div className="mt-10 md:mt-12 rounded-xl border border-slate-200 bg-surface px-6 py-5 md:px-8 md:py-6">
-          <p className="text-base md:text-lg text-slate-600 leading-relaxed">
-            <span className="font-mono text-sm uppercase tracking-wider text-accent-deep">
+        <div className="mt-8 md:mt-10 rounded-xl border border-slate-200 bg-surface px-5 py-4 md:px-6 md:py-5">
+          <p className="text-sm md:text-base text-slate-600 leading-relaxed">
+            <span className="font-mono text-xs uppercase tracking-[0.08em] text-accent-deep font-semibold">
               Why this matters
             </span>
-            <span className="mx-3 text-slate-300">·</span>
+            <span className="mx-2.5 text-slate-300">·</span>
             글로벌 대기업이 “부서·시스템을 한 의미로 묶기 위해” 도입하는 데이터 구조를,
             중소·중견 제조 현장이 <span className="font-semibold text-foreground">박스 한 대</span>로
             바로 쓸 수 있게 한 것이 EG-Icon의 다음 세대 방향입니다.

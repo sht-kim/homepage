@@ -77,10 +77,10 @@ export function Header() {
           className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent"
         />
 
-        <Container className="relative flex h-16 lg:h-24 items-center justify-between">
+        <Container className="relative flex h-14 lg:h-16 items-center justify-between">
           <Link
             href="/"
-            className="flex items-center bg-white rounded-md px-3 py-1.5 lg:px-5 lg:py-2.5 shadow-sm"
+            className="flex items-center bg-white rounded-md px-3 py-1.5 lg:px-4 lg:py-2 shadow-sm"
             aria-label="신호테크놀로지"
           >
             <Image
@@ -89,17 +89,17 @@ export function Header() {
               width={1160}
               height={224}
               priority
-              className="h-6 w-auto lg:h-10"
+              className="h-5 w-auto lg:h-7"
             />
           </Link>
 
-          {/* Desktop nav (>= lg / 1024px) — matches hansen's 980px threshold */}
-          <nav className="hidden lg:flex items-center gap-10 xl:gap-14">
+          {/* Desktop nav (>= lg / 1024px) */}
+          <nav className="hidden lg:flex items-center gap-8 xl:gap-10">
             {nav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-[26px] xl:text-[30px] font-semibold tracking-[-0.01em] text-slate-200 transition-colors hover:text-accent"
+                className="text-[15px] font-medium tracking-[-0.005em] text-slate-200 transition-colors hover:text-accent"
               >
                 {item.label}
               </Link>
@@ -110,7 +110,7 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-2">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center gap-2 h-14 px-8 rounded-lg bg-accent text-white text-base font-semibold transition-all duration-200 hover:bg-accent-deep active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b1226]"
+              className="inline-flex items-center justify-center gap-2 h-10 px-5 rounded-md bg-accent text-white text-sm font-semibold transition-all duration-200 hover:bg-accent-deep active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b1226]"
             >
               도입 문의
             </a>
@@ -171,19 +171,19 @@ export function Header() {
         <div className="h-1 bg-accent" />
 
         {/* Drawer header */}
-        <div className="flex h-16 items-center justify-between px-5 border-b border-slate-200">
-          <span className="font-mono text-sm uppercase tracking-[0.15em] text-slate-500 font-semibold">
+        <div className="flex h-14 items-center justify-between px-5 border-b border-slate-200">
+          <span className="font-mono text-xs uppercase tracking-[0.15em] text-slate-500 font-semibold">
             MENU
           </span>
           <button
             type="button"
             onClick={() => setOpen(false)}
             aria-label="메뉴 닫기"
-            className="inline-flex items-center justify-center size-11 rounded-md bg-accent text-white hover:bg-accent-deep transition-colors"
+            className="inline-flex items-center justify-center size-10 rounded-md bg-accent text-white hover:bg-accent-deep transition-colors"
           >
             <svg
-              width="20"
-              height="20"
+              width="18"
+              height="18"
               viewBox="0 0 24 24"
               fill="none"
               aria-hidden
@@ -198,7 +198,7 @@ export function Header() {
           </button>
         </div>
 
-        {/* Nav list — hansen-style 50px rows with left-border active indicator */}
+        {/* Nav list */}
         <nav className="flex flex-col">
           {nav.map((item) => {
             const isActive = activeHash === item.href;
@@ -208,7 +208,7 @@ export function Header() {
                 href={item.href}
                 onClick={() => setOpen(false)}
                 className={cn(
-                  "group flex items-center justify-between px-5 h-[60px] border-b border-slate-200 transition-colors",
+                  "group flex items-center justify-between px-5 h-[52px] border-b border-slate-200 transition-colors",
                   isActive
                     ? "border-l-[3px] border-l-accent bg-accent-soft/40 pl-[17px]"
                     : "border-l-[3px] border-l-transparent pl-[17px] hover:bg-slate-50"
@@ -216,7 +216,7 @@ export function Header() {
               >
                 <span
                   className={cn(
-                    "text-lg font-bold tracking-[-0.01em] transition-colors",
+                    "text-base font-semibold tracking-[-0.005em] transition-colors",
                     isActive ? "text-primary" : "text-foreground"
                   )}
                 >
@@ -247,14 +247,14 @@ export function Header() {
         </nav>
 
         {/* CTA */}
-        <div className="px-5 mt-6">
+        <div className="px-5 mt-5">
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="flex items-center justify-center gap-2 w-full h-13 px-6 py-3.5 rounded-md bg-accent text-white text-base font-semibold transition-all duration-200 hover:bg-accent-deep active:scale-[0.98]"
+            className="flex items-center justify-center gap-2 w-full h-11 px-5 rounded-md bg-accent text-white text-sm font-semibold transition-all duration-200 hover:bg-accent-deep active:scale-[0.98]"
           >
             도입 문의
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden>
               <path
                 d="M3.33 8h9.34M12.67 8L8 3.33M12.67 8L8 12.67"
                 stroke="currentColor"
@@ -266,18 +266,18 @@ export function Header() {
           </a>
         </div>
 
-        {/* CS info — hansen-style contact block in drawer */}
-        <div className="absolute bottom-0 left-0 right-0 px-5 py-5 border-t border-slate-200 bg-slate-50">
-          <p className="font-mono text-sm uppercase tracking-wider text-slate-500 font-semibold mb-2">
+        {/* CS info */}
+        <div className="absolute bottom-0 left-0 right-0 px-5 py-4 border-t border-slate-200 bg-slate-50">
+          <p className="font-mono text-xs uppercase tracking-[0.1em] text-slate-500 font-semibold mb-1.5">
             CS CENTER
           </p>
           <a
             href="mailto:hobae.kim@shinho-tech.co.kr"
-            className="block text-base font-medium text-foreground hover:text-accent-deep transition-colors break-all"
+            className="block text-sm font-medium text-foreground hover:text-accent-deep transition-colors break-all"
           >
             hobae.kim@shinho-tech.co.kr
           </a>
-          <p className="mt-1 text-sm text-slate-500 leading-relaxed">
+          <p className="mt-1 text-xs text-slate-500 leading-relaxed">
             충남 천안시 직산읍 직산로 136
           </p>
         </div>
